@@ -3,7 +3,7 @@
 with open("inputday1.txt", "r") as file:
     content = file.read().splitlines()
     for line in content:
-        compareList = content
+        compareList = content.copy()
         compareList.pop(compareList.index(line))
         for value in compareList:
             if int(line) + int(value) == 2020:
